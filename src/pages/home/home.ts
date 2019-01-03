@@ -18,8 +18,8 @@ export class HomePage {
     });
     loader.present();
     var isAuth = await this.authService.isAuthenticated();
-    if(!isAuth)
-      this.navCtrl.push(LoginPage);
     loader.dismiss();
+    if(!isAuth)
+      this.navCtrl.setRoot(LoginPage);
   }
 }
