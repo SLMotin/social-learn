@@ -14,11 +14,13 @@
 
 
 <ion-content padding>
-  <ion-item>
-    <ion-input required type="email" placeholder="Email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input required type="password" placeholder="Senha"></ion-input>
-  </ion-item>
-  <button ion-button>I AM A BUTTON!!!</button>
+  <form (ngSubmit)="logIn(f.value)" #f="ngForm">
+    <ion-item>
+        <ion-input required type="email" name="email" placeholder="Email" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input required type="password" name="password" placeholder="Senha" ngModel required></ion-input>
+    </ion-item>
+    <button ion-button block type="submit" [disabled]="!f.valid">I AM A BUTTON!!!</button>
+  </form>
 </ion-content>

@@ -19,6 +19,7 @@ export class AuthService {
     async isAuthenticated(){
         var isAuthenticated = false;
         this.authKey = await this.storage.get('authKey');
+        //to do check auth key on server
         if(this.authKey !== null)
             isAuthenticated = true;
         return isAuthenticated;

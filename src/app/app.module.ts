@@ -11,12 +11,14 @@ import { AuthService } from '../services/authentication.service';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { ProfilePage } from '../pages/profile/profile';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LoginPage,
+    ProfilePage
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { LoginPage } from '../pages/login/login';
     MyApp,
     HomePage,
     LoginPage,
+    ProfilePage
   ],
   providers: [
     StatusBar,
